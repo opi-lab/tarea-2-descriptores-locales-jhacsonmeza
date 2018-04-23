@@ -1,33 +1,9 @@
 # Local Image Descriptors
 
-Esta segunda tarea tiene que ver con la utilización de descriptores locales de imagenes, como Harris o SIFT. Estos descriptores son ampliamente utilizados para distintas aplicaciones como pegado de imágenes, reconocimiento de objetos, navegación de robots, etc. 
+This repository is based on chapter 2 of the book *Programming Computer Vision with Python* by Jan Erik Solem. Which solve the example proposed about features matching using Harris corners detector. Further, a solution is give for the first proposed problem at the end of the chapter. These solutions are developed with Python with the iPython notebook tool.
 
-Deberán modificar este archivo ``README.md`` en dónde describan la documentación del código que están adjuntando. En particular deben cumplir con lo siguiente:
+## Files
 
-1. Un programa en dónde utilicen el código de ejemplo del capítulo 2 del detector de esquinas de Harris y modifiquen parámetros, cambien imágenes, número de detecciones, etc. Las imágenes o archivos binarios que utilicen deben subirlas al repositorio también en una carpeta llamada ``data``. Debe llevar el nombre ``ch02-harris-example.py``. 
-2. Deben resolver el ejercicio 1 del final del capítulo. Debe llevar el nombre ``ch02-ex1.py``. 
-3. Bonificación por cualquier ejercicio o programa adicional.
+* ``ch02-harris-example.ipynb`` developed the example proposed at the beginning of the chapter 2. Here we use the functions defined across the chapter for find correspondences between points in two images. This example is developed with a pair images that you can change for proof the algorithm (In ``Data`` there ara other images to try).
 
-Ejemplo de la estructura del repositorio a subir
-
-	tarea2-descriptores-locales-JuanPerez/
-	.
-	├── README.md
-	├── ch02-harris-example.py
-	├── ch02-ex1.py
-	├── data
-	│   ├── image.jpg
-  
-## Recomendación para cargar archivos/imágenes
-
-Debido a que algunos de nosotros trabajamos en equipos bajo algun sabor unix (Linux,OSX,etc.) y otros en Windows, es recomendable que a la hora de definir un camino (*path*) hacia una imagen u otro archivo dentro de su programa utilicen ``os.path``. Un ejemplo sencillo es [el siguiente:][path_link]
-
- 	 Ejecutando en Windows sale esto 
-	  print os.path.abspath("/var/lib/blob_files/myfile.blob")
-	  >>> C:\var\lib\blob_files\myfile.blob
-  
-	  En unix sale esto
-	  /var/lib/blob_files/myfile.blob
-  
-
-[path_link]: https://stackoverflow.com/questions/13162372/using-absolute-unix-paths-in-windows-with-python
+* ``ch02-ex1.ipynb`` give solution to the first proposed problem of chapter. This file modify the function ``match`` and ``match_twosided`` functions introduced in the ``ch02-harris-example.ipynb`` code. The principal idea is find matches between images points within a radius specified by usuer. By default this radius of search is set to 100 px, but you can test with other values.
